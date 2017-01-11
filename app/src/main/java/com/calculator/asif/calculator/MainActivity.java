@@ -1,18 +1,18 @@
 package com.calculator.asif.calculator;
 
-import android.content.Context;
-import android.content.res.Configuration;
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import java.text.DecimalFormat;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.widget.Toast;
+
+import java.text.DecimalFormat;
 /**
  * Created by Asif on 12-Jun-16.
  */
@@ -151,7 +151,7 @@ public class MainActivity extends Activity {
         }
         else {
 
-            this.result_display.setText(this.result_display.getText() + btn.getText().toString());
+            this.result_display.setText(this.result_display.getText().toString() + btn.getText().toString());
         }
 
     }
@@ -167,10 +167,11 @@ public class MainActivity extends Activity {
             if (result_display.getText().toString().equals("0") ) {
                 this.result_display.setText(btn.getText().toString());
             }
-            else if(value==0 && eq==0)
+            /*else if(value==0 && eq==0)
             {
+                Toast.makeText(this, "Ekhane na", Toast.LENGTH_SHORT).show();
                 this.result_display.setText(btn.getText().toString());
-            }
+            }*/
             else
                 displaylimit(x,v);
             /*else if (x.length()>22 && config==1)
